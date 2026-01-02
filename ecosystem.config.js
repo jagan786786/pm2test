@@ -14,7 +14,7 @@ module.exports = {
     deploy: {
         production: {
             user: "ubuntu",
-            host: "13.60.36.169",
+            host: "13.60.63.251",
             ref: "origin/main",
             repo: "https://github.com/jagan786786/pm2test.git",
             path: "/var/www/twilio-backend",
