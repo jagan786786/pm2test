@@ -1,7 +1,7 @@
 module.exports = {
     apps: [{
-        name: "AI Assitant",
-        script: "sc/server.js",
+        name: "ai-assitant",
+        script: "src/server.js",
         instances: "max",
         exec_mode: "cluster",
         env: {
@@ -16,7 +16,10 @@ module.exports = {
             user: "ubuntu",
             host: "13.60.36.169",
             ref: "origin/main",
-            repo: "",
+            repo: "https://github.com/jagan786786/pm2test.git",
+            path: "/var/www/twilio-backend",
+            "post-deploy":
+                "npm install && pm2 reload ecosystem.config.js --env production",
 
         }
     }
